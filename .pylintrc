@@ -1,0 +1,31 @@
+[MASTER]
+persistent=yes
+init-hook="import sys; import os; sys.path.append(os.path.abspath('app'));"
+
+[MESSAGES CONTROL]
+# C0111 Missing docstring
+disable=C0111
+
+[REPORTS]
+output-format=parseable
+
+
+[TYPECHECK]
+
+# Tells whether missing members accessed in mixin class should be ignored. A
+# mixin class is detected if its name ends with "mixin" (case insensitive).
+ignore-mixin-members=yes
+
+# List of method names used to declare (i.e. assign) instance attributes
+defining-attr-methods=__init__,__new__,setUp
+
+
+[FORMAT]
+max-line-length=120
+# Increasing this value to 1000 from 500 (default)
+max-module-lines=1000
+indent-string='    '
+
+
+[DESIGN]
+min-public-methods=0
